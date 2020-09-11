@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>validation</title>
+    <style>
+        body{
+            border-spacing:10px 50px;
+        }
+    </style>
+    <script>
+
+        function validate() {
+            var name = document.val.name.value;
+            var password = document.val.password.value;
+
+            if (name == null || name == "") {
+                alert("Name can't be blank");
+            } else if (password.length == null || password.length == " ") {
+                alert("Password can't be blank");
+            }
+            else
+                alert("Successfully Completed");
+        }
+    </script>
+    <style>
+        #syl {
+            border: none;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .cen {
+            margin: auto;
+            width: 20%;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 40px
+        }
+    </style>
+</head>
+<body>
+    <center  >
+
+    <form class="cen" name="val" onsubmit="return validate()">
+        Name: <input style="margin-top: 10px ;margin-left:20px ";     type="text" name="name"><br /><br />
+        Password: <input type="password" name="password"><br /><br />
+           <input id="syl" style="background-color: blue;" ; type="submit" value="Validate" onclick="validate()">
+           <input id="syl" style="margin-left:30px;background-color:red" ; type="reset" value="Clear" />
+    </form>
+    </center>
+</body>
+</html>
